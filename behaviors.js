@@ -1,5 +1,5 @@
 (function($){
-$.fn.calcROI = function(){  
+$.fn.calcROI = function(){ // requires rather specific conditions
 	return this.each(function(){
 		var $this = $(this);
 		var roiTotal = 0; // Grand total
