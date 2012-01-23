@@ -1,7 +1,7 @@
 #Library ROI Calculator
 
 ##Background
-The calculator worksheet [started as a downloadable spreadsheet](http://www.maine.gov/msl/services/value.xls), originally provided by the Massachusetts Library Association. The spreadsheet was [adapted for the web by Brian Herzog at Chelmsford Public Library](http://www.chelmsfordlibrary.org/library_info/calculator.html). This version of the calculator was adapted from the [Maine State Library](http://www.maine.gov/msl/services/customcal.htm).
+The calculator worksheet [started as a downloadable spreadsheet](http://www.maine.gov/msl/services/value.xls), originally provided by the Massachusetts Library Association. The spreadsheet was [adapted for the web by Brian Herzog at Chelmsford Public Library](http://www.chelmsfordlibrary.org/library_info/calculator.html). This version of the calculator was adapted from [Maine State Library](http://www.maine.gov/msl/services/customcal.htm).
 
 ##Easy HTML Customization
 In index.html, you will see table rows that look like:
@@ -35,3 +35,12 @@ Only some of the CSS styles.css is strictly necessary, and is included in the se
 In order to provide a speedy experience and minimize the download size of the calculator, the HTML file links to the the most recent minimized jQuery 1 branch point release hosted by on Google's CDN. You may wish to self-host your own version of jQuery. The calculator now relies on jQuery 1.7 or greater, but only for the ```.on()``` method, so if you use a lower version of jQ you should be able to adapt the event to ```.bind()```.
 
 The JavaScript uses a jQuery method for calculating totals, so any form on a page classed "calculator" with a semantically-correct table of the same basic structure as the provided example will work. You can even have multiple calculators per page! [Note: if you intend to load forms into the DOM after page load, you will have to augment the event bindings to bubble from a reasonable container selector]
+
+##Accessibility
+This form provides a11y features for various circumstances.
+
+In the case of users with JavaScript disabled, a ```<noscript>``` tag provides some textual support. Likewise, the hidden help text is hidden using JavaScript, so those elements will appear if JS is turned off.
+
+The HTML semantics likewise provide accessibility help. The results of calculations are put in ```<output>``` elements, though the WAI-ARIA liveregion state is not augmented at this time. Each row only has one input, so tab order does not require overrides.
+
+A per-site accessibility improvement for non-JavaScript users is post-form processing on the server side. Since different server environments use different scripting languages, this (not required) step is left as an exercise to the kit user.

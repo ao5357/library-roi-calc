@@ -11,10 +11,13 @@ table{border:2px solid #cdced0;border-collapse:collapse;font-size:.875em;margin:
 	tfoot{}
 	th{border-right:1px solid #b8b8ba;border-bottom:1px solid #95999c;padding:2px 6px 2px 2px;}
 
-/* Styles specific to calculators */
+/* Styles specific to calculators 
+ *	Note: if the styles don't interfere with other page/site styles, de-qualifying them would increase perf 
+ */
 .calculator{}
-	.calculator label > input,input[type="number"]{width:6em;}
+	.calculator input[type="text"],.calculator input[type="number"]{width:6em;}
+	.calculator tbody label{padding-left:19px;}
 	.calculator td{min-width:8em;}
-	.calculator tfoot input[disabled]{color:#000;text-align:center;}
-.helptext{background:url(images/help.png) no-repeat scroll 0 1px transparent;cursor:pointer;padding-left:19px;}
-.roi-explanation{background:#ddd;border:1px solid #ccc;display:none;margin:0 5px 10px;padding:5px;}
+	.calculator tfoot output{font-weight:bold;}
+	.calculator .helptext{background:url(images/help.png) no-repeat scroll 0 1px transparent;cursor:pointer;}
+	.calculator .roi-explanation{background:#ddd;border:1px solid #ccc;margin:0 5px 10px;padding:5px;}

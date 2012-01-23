@@ -17,46 +17,59 @@
 	<thead>
 		<tr><th scope="col">Usage</th><th scope="col">Library Services</th><th scope="col">Value of Services</th></tr>
 	</thead><tbody>
-		<tr><td><input data-roi-formula="* 288" type="checkbox" id="books" name="books" /></td>
+		<tr>
+			<td><input data-roi-formula="* 288" type="checkbox" id="books" name="books" /></td>
 			<td><label for="books">Borrowed Books</label><p class="roi-explanation">Borrowing a library book is not the same value as buying a new book. As such, we base the savings on the approximate annual cost of services like <a href="http://www.booksfree.com/">Booksfree</a> and <a href="http://www.bookswim.com/">BookSwim</a>, which work like Netflix but for books.</p></td>
-			<td><label>$<input type="text" value="0.00" id="booksResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 96" type="checkbox" id="movies" name="movies" /></td>
+			<td><output for="books" id="booksResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 96" type="checkbox" id="movies" name="movies" /></td>
 			<td><label for="movies">Borrowed Movies</label><p class="roi-explanation"><a href="http://www.netflix.com/">Netflix</a> DVDs by mail (rounded to $8/month) is the closest 'competitor' to our DVD lending service.</p></td>
-			<td><label>$<input type="text" value="0.00" id="moviesResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 30" type="number" value="0" min="0" step="1" id="compclass" name="compclass" /></td>
+			<td><output for="movies" id="moviesResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 30" type="number" value="0" min="0" step="1" id="compclass" name="compclass" /></td>
 			<td><label for="compclass">Computer Classes Attended</label><p class="roi-explanation">Our calculation of $30 per class is approximated on the average 1.5 hour cost for one-time computer [personal enrichment] classes at local Universities and Community Colleges.</p></td>
-			<td><label>$<input type="text" value="0.00" id="compclassResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 2" type="number" value="0" min="0" step="1" id="newsmags" name="newsmags" /></td>
+			<td><output for="compclass" id="compclassResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 2" type="number" value="0" min="0" step="1" id="newsmags" name="newsmags" /></td>
 			<td><label for="newsmags">Magazines &amp; Newspapers Read</label><p class="roi-explanation">Given the ephemeral nature of Magazines and Newspapers, it is fair to approximate reading and/or borrowing periodicals as the same as newsstand price, or $2 each.</p></td>
-			<td><label>$<input type="text" value="0.00" id="newsmagsResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 7" type="number" value="0" min="0" step="1" id="music" name="music" /></td>
+			<td><output for="newsmags" id="newsmagsResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 7" type="number" value="0" min="0" step="1" id="music" name="music" /></td>
 			<td><label for="music">Music CDs Borrowed</label><p class="roi-explanation">The $7 approximation is based on the purchase price of an album on iTunes, and the per-album queue price for the <a href="http://www.yourmusic.com/">Yourmusic</a> service.</p></td>
-			<td><label>$<input type="text" value="0.00" id="musicResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 10" type="number" value="0" min="0" step="1" id="enrichprog" name="enrichprog" /></td>
+			<td><output for="music" id="musicResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 10" type="number" value="0" min="0" step="1" id="enrichprog" name="enrichprog" /></td>
 			<td><label for="enrichprog">Enrichment Program(s) Attended</label><p class="roi-explanation">Storytimes and programs for children and adults. $10 per program is based on similar local offerings.</p></td>
-			<td><label>$<input type="text" value="0.00" id="enrichprogResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 45" type="number" value="0" min="0" step="1" id="tutoring" name="tutoring" /></td>
+			<td><output for="enrichprog" id="enrichprogResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 45" type="number" value="0" min="0" step="1" id="tutoring" name="tutoring" /></td>
 			<td><label for="tutoring">Tutoring Hour(s) Attended</label><p class="roi-explanation">Tutoring Value based on estimated per-hour cost of similar commercial services.</p></td>
-			<td><label>$<input type="text" value="0.00" id="tutoringResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 15" type="number" value="0" min="0" step="1" id="reference" name="reference" /></td>
+			<td><output for="tutoring" id="tutoringResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 15" type="number" value="0" min="0" step="1" id="reference" name="reference" /></td>
 			<td><label for="reference">Reference Question(s) Asked</label><p class="roi-explanation">It's tough to estimate a fixed value for Reference. A question of fact, like those asked through <a href="http://www.chacha.com/">ChaCha</a>, is free on the open market. An hour of professional research through many libraries (<a href="http://www.nypl.org/help/research-and-reference-services/nypl-express/fees-and-payment">including New York Public Library</a>) routinely costs $60 or more.</p></td>
-			<td><label>$<input type="text" value="0.00" id="referenceResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 12" type="number" value="0" min="0" step="1" id="computers" name="computers" /></td>
+			<td><output for="reference" id="referenceResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 12" type="number" value="0" min="0" step="1" id="computers" name="computers" /></td>
 			<td><label for="computers">Hour(s) of Computer Use</label><p class="roi-explanation">If you don't have access to a computer, the most viable option beside the library is <a href="http://www.fedex.com/us/office/">Fedex Office</a>. They charge $12 per hour of computer use.</p></td>
-			<td><label>$<input type="text" value="0.00" id="computersResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 50" type="number" value="0" min="0" step="1" id="studyroom" name="studyroom" /></td>
+			<td><output for="computers" id="computersResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 50" type="number" value="0" min="0" step="1" id="studyroom" name="studyroom" /></td>
 			<td><label for="studyroom">Hour(s) of Study Room Use</label><p class="roi-explanation">Renting a room at other local attractions averages $50 per hour.</p></td>
-			<td><label>$<input type="text" value="0.00" id="studyroomResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 20" type="number" value="0" min="0" step="1" id="databases" name="databases" /></td>
+			<td><output for="studyroom" id="studyroomResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 20" type="number" value="0" min="0" step="1" id="databases" name="databases" /></td>
 			<td><label for="databases">Databases Accessed</label><p class="roi-explanation">Like reference questions, accessing databases has a varying and subjective value. The $20 estimate is approximate, based on short-period personal access costs to various databases.</p></td>
-			<td><label>$<input type="text" value="0.00" id="databasesResult" disabled /></label></td></tr>
-		<tr><td><input data-roi-formula="* 9" type="number" value="0" min="0" step="1" id="passes" name="passes" /></td>
+			<td><output for="databases" id="databasesResult"></output></td>
+		</tr><tr>
+			<td><input data-roi-formula="* 9" type="number" value="0" min="0" step="1" id="passes" name="passes" /></td>
 			<td><label for="passes">Museum Adventure or Park &amp; Read Passes Borrowed</label><p class="roi-explanation">The $9 estimate is an average of ticket prices to local museums, parks, and other attractions.</p></td>
-			<td><label>$<input type="text" value="0.00" id="passesResult" disabled /></label></td></tr>
+			<td><output for="passes" id="passesResult"></output></td>
+		</tr>
 	</tbody><tfoot>
-		<tr><td colspan="2"><strong>Total</strong>:</td><td><label>$<input type="text" value="0.00" id="totalResult" disabled /></label></td></tr>
+		<tr><td colspan="2"><strong>Total</strong>:</td><td><output for="booksResult moviesResult compclassResult newsmagsResult musicResult enrichprogResult tutoringResult referenceResult computersResult studyroomResult databasesResult passesResult"></output></td></tr>
 	</tfoot></table>
 </form>
-<noscript>Your computer does not support JavaScript. The form in the table above requires JavaScript for real-time calculation. Synopsis: Just checking out books and movies in a given year is worth $396 when compared to similar commercial offerings.</noscript>
+<noscript>Your computer does not support JavaScript. The form in the table above requires JavaScript for real-time calculation. Synopsis: Just checking out books and movies in a given year is worth $384 when compared to similar commercial offerings.</noscript>
 <a href="https://github.com/ao5357/library-roi-calc">Get the kit</a> to use this calculator on your library site.
 </div></body></html>
