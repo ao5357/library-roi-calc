@@ -9,12 +9,12 @@ Library ROI Calculator is licensed under <a rel="license" href="http://creativec
 ##Easy HTML Customization
 In index.html, you will see table rows that look like:
 
-```	<tr>
-		<td><input data-roi-formula="* 30" type="number" value="0" min="0" step="1" id="compclass" name="compclass" /></td>
-		<td><label for="compclass">Computer Classes Attended</label>
-			<p class="roi-explanation">This paragraph explains the associated formula.</p></td>
-		<td><label for="compclassResult">$<input type="text" value="0.00" id="compclassResult" disabled="disabled" /></label></td>
-	</tr>
+```
+<tr>
+	<td><input data-roi-formula="* 30" type="number" value="0" min="0" step="1" id="compclass" name="compclass" /></td>
+	<td><label for="compclass">Computer Classes Attended</label><p class="roi-explanation">This paragraph explains the associated formula.</p></td>
+	<td><output for="compclass" id="compclassResult"></output></td>
+</tr>
 ```
 
 In the first cell is an input. For the script to work properly, the input MUST have a data-roi-formula attribute with an evaluatable formula within. Formulas can be sophisticated JavaScript expressions if desired, but will usually just be "* DD" where DD is the number to multiply by. The asterisk indicates multiplication. Checkbox inputs evaluate the right side of the formula with a left side of 1.
