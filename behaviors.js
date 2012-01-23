@@ -1,4 +1,7 @@
 $(document).ready(function(){
+/* Styling */
+$("#totalResult").css({'color':'#000','text-align':'center'});
+
 /* Functions */
 function roicalculate(){
 	var roiTotal = 0; // Grand total
@@ -41,7 +44,7 @@ $("#calculator tbody tr").find("td:eq(1) label").each(function(){
 			var labelFor = label.attr("for");
 			$("#" + labelFor).focus().select();
 			e.preventDefault();
-			});
+			}).attr("title","Click to toggle explanatory text");
 		}
 	else{
 		label.css({'padding-left':'19px'});
