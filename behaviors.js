@@ -1,3 +1,4 @@
+/* Library ROI Calculator is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License [ http://creativecommons.org/licenses/by-sa/3.0/ ] */
 (function($){
 $.fn.calcROI = function(){ // requires rather specific conditions
 	return this.each(function(){
