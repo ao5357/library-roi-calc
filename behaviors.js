@@ -30,32 +30,25 @@ $.fn.calcROI = function(){
 })(jQuery);
 
 $(document).ready(function(){
-$("#calculator tbody tr").find("td:eq(1) label").each(function(){
+/* Bind events */
+$(".calculator").calcROI().find("tbody tr").find("td:eq(1) label").each(function(){
 	var label = $(this);
 	if(label.siblings("p.roi-explanation").length == 1){
-		label.addClass('helptext').click(function(e){ // Toggle help text
-			var helptext = label.siblings("p.roi-explanation");
-			if(helptext.css("display") == "none"){
-				helptext.show("slow");
-				}
-			else{
-				helptext.hide("slow");
-				}
-			var labelFor = label.attr("for");
-			$("#" + labelFor).focus().select();
+		label.addClass('helptext').attr("title","Click to toggle explanatory text").click(function(e){
+			label.siblings("p.roi-explanation").slideToggle("slow");
+			$("#" + label.attr("for")).focus().select();
 			e.preventDefault();
-			}).attr("title","Click to toggle explanatory text");
+			});
 		}
 	else{
 		label.css({'padding-left':'19px'});
 		}
 	});
-$(".calculator").submit(function(){ // calculate when someone hits 'Enter' and make sure the form doesn't actually submit
+$(".calculator").submit(function(){
 	$(this).calcROI();
 	return false;
 	});
 $(".calculator").on("change keyup","input",function(e){
 	$(this).parents(".calculator").calcROI();
 	});
-$(".calculator").calcROI(); // Calculate on page load just in case
 });
