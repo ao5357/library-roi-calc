@@ -12,7 +12,7 @@ table{border:2px solid #cdced0;border-collapse:collapse;font-size:.875em;margin:
 
 .page{margin:0 auto;width:45em;}
 #calculator{}
-	#calculator label input{width:6em;}
+	#calculator label > input{width:6em;}
 	#calculator td{min-width:8em;}
 	#totalResult{color:#000;text-align:center;}
 
