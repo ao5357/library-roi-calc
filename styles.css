@@ -1,4 +1,5 @@
-input[type="number"]{width:6em;}
+/* Plain demo page styles */
+.page{margin:0 auto;width:45em;}
 table{border:2px solid #cdced0;border-collapse:collapse;font-size:.875em;margin:1em 0;}
 	thead{}
 		thead th{background:#f8f8f8;border-right:1px solid #b8b8ba;border-bottom:1px solid #95999c;color:#111;font-weight:bold;}
@@ -10,11 +11,10 @@ table{border:2px solid #cdced0;border-collapse:collapse;font-size:.875em;margin:
 	tfoot{}
 	th{border-right:1px solid #b8b8ba;border-bottom:1px solid #95999c;padding:2px 6px 2px 2px;}
 
-.page{margin:0 auto;width:45em;}
-#calculator{}
-	#calculator label > input{width:6em;}
-	#calculator td{min-width:8em;}
-	#totalResult{color:#000;text-align:center;}
-
-.helptext{background:transparent url(images/help.png) 0 1px no-repeat;cursor:pointer;padding-left:19px;}
-.roi-explanation{background:#ddd;border:1px solid #ccc;display:none;margin:0 5px 10px 5px;padding:5px;}
+/* Styles specific to calculators */
+.calculator{}
+	.calculator label > input,input[type="number"]{width:6em;}
+	.calculator td{min-width:8em;}
+	.calculator tfoot input[disabled]{color:#000;text-align:center;}
+.helptext{background:url(images/help.png) no-repeat scroll 0 1px transparent;cursor:pointer;padding-left:19px;}
+.roi-explanation{background:#ddd;border:1px solid #ccc;display:none;margin:0 5px 10px;padding:5px;}
