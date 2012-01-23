@@ -17,7 +17,7 @@ In index.html, you will see table rows that look like:
 </tr>
 ```
 
-In the first cell is an input. For the script to work properly, the input MUST have a data-roi-formula attribute with an evaluatable formula within. Formulas can be sophisticated JavaScript expressions if desired, but will usually just be "* DD" where DD is the number to multiply by. The asterisk indicates multiplication. Checkbox inputs evaluate the right side of the formula with a left side of 1.
+In the first cell is an input. For the script to work properly, the input should have a data-roi-formula attribute with an evaluatable formula within. Formulas can be sophisticated JavaScript expressions if desired, but will usually just be "* DD" where DD is the number to multiply by. The asterisk indicates multiplication. Checkbox inputs evaluate the right side of the formula with a left side of 1. If a formula is not present, the calculator will default to adding by 1.
 
 The input's type can be number, text, or checkbox per the included script. For a checkbox, remove the value, min, and step attributes (see the first two rows of the example file). A number type input will display as a text input in browsers that have not yet implemented HTML5 inputs. In webkit and other fancy browsers, the experience is progressively-enhanced.
 
@@ -27,10 +27,9 @@ The second part of the second cell is a paragraph (classed "roi-explanation") fo
 
 The last cell contains the result section. In the example, all results follow with a common-sense naming convention. This could help keep your implementation's markup clean and accessible.
 
-You can add or subtract rows as much as you wish, as long as you keep the last (grand total) row. As long as your HTML follows the convention of the demo, everything should JUST WORK.
+You can add or subtract rows as much as you wish, as long as you keep the last (grand total) row. As long as your HTML follows the convention of the demo, everything should just work.
 
-Please note that this version of the calculator uses HTML5 data attributes to store critical information. As such, your site should use the HTML5 doctype if validation is a concern.
-	```<!DOCTYPE html>```
+Please note that this version of the calculator uses HTML5 data attributes to store critical information. As such, your site should use the HTML5 doctype if validation is a concern. ```<!DOCTYPE html>```
 
 ##CSS Customization
 Only some of the CSS styles.css is strictly necessary, and is included in the second half of the file.
