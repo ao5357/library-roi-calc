@@ -3,10 +3,10 @@
 $.fn.calcROI = function(){ // requires rather specific conditions
 	return this.each(function(){
 		var $this = $(this);
-		var roiTotal = 0; // Grand total
+		var totalROI = 0;
 		$this.find("tbody tr").each(function(i){
-			var obj = $(this);var inVal = 0;var outVal = 0;
-			var input = obj.find("input");
+			var row = $(this);var inVal = 0;var outVal = 0;
+			var input = row.find("input");
 			if(input.attr("type") == "number" || input.attr("type") == "text"){
 				inVal = new String(input.val());
 				inVal = inVal.replace(/[^0-9]/g,''); // remove non-numeric characters before evaluating
@@ -19,10 +19,10 @@ $.fn.calcROI = function(){ // requires rather specific conditions
 			var formula = (input.attr("data-roi-formula")) ? input.attr("data-roi-formula") : '';
 			outVal = eval(inVal + formula);
 			outVal = parseFloat(outVal).toFixed(2);
-			obj.find("output").text("$" + outVal);
-			roiTotal += parseFloat(outVal);
+			row.find("output").text("$" + outVal);
+			totalROI += parseFloat(outVal);
 			});
-		$this.find("tfoot output").text("$" + roiTotal.toFixed(2));
+		$this.find("tfoot output").text("$" + totalROI.toFixed(2));
 		});
 	};
 })(jQuery);
@@ -43,8 +43,7 @@ $(".calculator").calcROI().find("tbody tr").find("label").each(function(){
 $(".calculator").submit(function(){
 	$(this).calcROI();
 	return false;
-	});
-$(".calculator").on("change keyup input","input",function(e){
-	$(this).parents(".calculator").calcROI();
+	}).on("change keyup input","input",function(e){
+		$(this).parents(".calculator").calcROI();
 	});
 });
