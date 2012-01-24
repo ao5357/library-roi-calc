@@ -17,8 +17,9 @@ table{border:2px solid #cdced0;border-collapse:collapse;font-size:.875em;margin:
  */
 .calculator{}
 	.calculator input[type="text"],.calculator input[type="number"]{width:6em;}
-	.calculator tbody label{padding-left:19px;}
+	.calculator tbody label:before{margin-right:15px;}
 	.calculator td{min-width:8em;}
 	.calculator tfoot output{font-weight:bold;}
-	.calculator .helptext{background:url(images/help.png) no-repeat scroll 0 1px transparent;cursor:pointer;}
+	.calculator .helptext{cursor:pointer;}
+		.calculator .helptext:before{background:#0067ba;border:2px solid #ccc;border-radius:10px;box-shadow:1px 1px 1px rgba(0,0,0,.4);color:#fff;content:'?';display:inline-block;font-size:12px;font-weight:bold;min-width:1.2em;text-align:center;}
 	.calculator .roi-explanation{background:#ddd;border:1px solid #ccc;margin:0 5px 10px;padding:5px;}
