@@ -10,7 +10,7 @@ $.fn.calcROI = function(){ // requires rather specific conditions
 			if(input.attr("type") == "number" || input.attr("type") == "text"){
 				inVal = new String(input.val());
 				inVal = inVal.replace(/[^0-9]/g,''); // remove non-numeric characters before evaluating
-				inVal = (inVal.length >= 0) ? inVal : 1;
+				inVal = (inVal.length >= 1) ? inVal : 0;
 				}
 			else if(input.attr("type") == "checkbox" && input.filter("input:checked").length == 1){
 				inVal = 1;
