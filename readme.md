@@ -12,7 +12,7 @@ In index.html, you will see table rows that look like:
 ```
 <tr>
 	<td><input data-roi-formula="* 30" type="number" value="0" min="0" step="1" id="compclass" name="compclass" /></td>
-	<td><label for="compclass">Computer Classes Attended</label><p class="roi-explanation">This paragraph explains the associated formula.</p></td>
+	<td><label for="compclass">Computer Classes Attended</label><p class="formula-explanation">This paragraph explains the associated formula.</p></td>
 	<td><output for="compclass" id="compclassResult"></output></td>
 </tr>
 ```
