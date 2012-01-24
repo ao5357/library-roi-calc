@@ -1,6 +1,5 @@
 /* Library ROI Calculator is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License [ http://creativecommons.org/licenses/by-sa/3.0/ ] */
-(function($){
-$.fn.calcROI = function(){ // requires rather specific conditions
+(function($){$.fn.calcROI = function(){ // requires rather specific conditions
 	return this.each(function(){
 		var $this = $(this), totalROI = 0;
 		$this.find("tbody tr").each(function(i){
@@ -21,20 +20,20 @@ $.fn.calcROI = function(){ // requires rather specific conditions
 			});
 		$this.find("tfoot output").text("$" + totalROI.toFixed(2));
 		});
-	};
-})(jQuery);
+};})(jQuery);
 
 document.createElement("output"); // shiv for IE8-; Before jQ traverses the DOM
 $(document).ready(function(){ // bind events
-$(".calculator").calcROI()
+$(".calculator")
+	.calcROI()
 	.submit(function(){$(this).calcROI();return false;})
 	.on("change keyup input","input",function(e){$(this).parents(".calculator").calcROI();})
 	.find("tbody tr").find("label").each(function(){
-		var label = $(this);
-		if(label.siblings(".roi-explanation").length >= 1){
-			label.siblings(".roi-explanation").hide();
+		var label = $(this), formulaExplanation = label.siblings(".formula-explanation");
+		if(formulaExplanation.length >= 1){
+			formulaExplanation.hide();
 			label.addClass('helptext').attr("title","Click to toggle explanatory text").click(function(e){
-				label.siblings(".roi-explanation").slideToggle("slow");
+				formulaExplanation.slideToggle("slow");
 				$("#" + label.attr("for")).focus().select();
 				e.preventDefault();
 				});
