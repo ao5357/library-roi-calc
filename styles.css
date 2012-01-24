@@ -20,6 +20,6 @@ table{border:2px solid #cdced0;border-collapse:collapse;font-size:.875em;margin:
 	.calculator tbody label:before{margin-right:15px;}
 	.calculator td{min-width:8em;}
 	.calculator tfoot output{font-weight:bold;}
-	.calculator .helptext{cursor:pointer;}
-		.calculator .helptext:before{background:#1969BB;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff88c3f1',endColorstr='#ff1969BB');background:-webkit-linear-gradient(top,#88C3F1,#1969BB) repeat scroll 0 0;background:-moz-linear-gradient(center top,#88C3F1,#1969BB) repeat scroll 0 0;background:-ms-linear-gradient(top,#88C3F1,#1969BB) repeat scroll 0 0;border:2px solid #ccc;border-radius:10px;box-shadow:1px 1px 1px rgba(0,0,0,.4);color:#fff;content:'?';display:inline-block;font-size:12px;font-weight:bold;min-width:1.2em;text-align:center;}
+	.calculator .more-info{cursor:pointer;}
+		.calculator .more-info:before{background:#1969BB;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff88c3f1',endColorstr='#ff1969BB');background:-webkit-linear-gradient(top,#88C3F1,#1969BB) repeat scroll 0 0;background:-moz-linear-gradient(center top,#88C3F1,#1969BB) repeat scroll 0 0;background:-ms-linear-gradient(top,#88C3F1,#1969BB) repeat scroll 0 0;border:2px solid #ccc;border-radius:10px;box-shadow:1px 1px 1px rgba(0,0,0,.4);color:#fff;content:'\1f30';display:inline-block;font-size:12px;font-weight:bold;min-width:1.2em;text-align:center;}
 	.calculator .formula-explanation{background:#ddd;border:1px solid #ccc;margin:0 5px 10px;padding:5px;}

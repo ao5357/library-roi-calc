@@ -32,7 +32,7 @@ $(".calculator")
 		var label = $(this), formulaExplanation = label.siblings(".formula-explanation");
 		if(formulaExplanation.length >= 1){
 			formulaExplanation.hide();
-			label.addClass('helptext').attr("title","Click to toggle explanatory text").click(function(e){
+			label.addClass('more-info').attr("title","Click to toggle explanatory text").click(function(e){
 				formulaExplanation.slideToggle("slow");
 				$("#" + label.attr("for")).focus().select();
 				e.preventDefault();
