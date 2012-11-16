@@ -1,4 +1,5 @@
 #Library ROI Calculator
+[Try out the working demo](http://ao5357.github.com/library-roi-calc)
 
 ##Background
 The calculator worksheet [started as a downloadable spreadsheet](http://www.maine.gov/msl/services/value.xls), originally provided by the [Massachusetts Library Association](http://mla.memberlodge.org/). The spreadsheet was [adapted for the web by Brian Herzog at Chelmsford Public Library](http://www.chelmsfordlibrary.org/library_info/calculator.html). This version of the calculator was adapted from [Maine State Library](http://www.maine.gov/msl/services/customcal.htm) for [Canton Public Library](https://www.cantonpl.org/donate) by [Brad Czerniak](https://github.com/ao5357).
