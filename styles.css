@@ -1,5 +1,6 @@
 /* Library ROI Calculator [ https://github.com/ao5357/library-roi-calc ] is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License [ http://creativecommons.org/licenses/by-sa/3.0/ ] */
 /* Plain demo page styles */
+body{background:#fff;color:#111;font-family:Arial,sans-serif;line-height:1.5;margin:0;}
 .page{margin:0 auto;width:45em;}
 table{border:2px solid #cdced0;border-collapse:collapse;font-size:.875em;margin:1em 0;}
 	thead{}
